@@ -6,9 +6,10 @@ import {HomeComponent} from './home/home.component';
 import {ComponentsModule} from '../components/components.module';
 import {PipesModule} from '../pipes/pipes.module';
 import {RouterModule} from '@angular/router';
+import {RandomTrailerComponent} from './random-trailer/random-trailer.component';
 
 @NgModule({
-    declarations: [HomeComponent],
+    declarations: [HomeComponent, RandomTrailerComponent],
     imports: [CommonModule, PipesModule, ComponentsModule, RouterModule],
 })
 export class PagesModule {}

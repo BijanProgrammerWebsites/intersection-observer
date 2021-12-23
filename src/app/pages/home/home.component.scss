@@ -1,6 +1,8 @@
 .wrapper {
     --gap: 2rem;
 
+    padding-block: var(--shell--padding);
+
     nav {
         ul {
             display: flex;
