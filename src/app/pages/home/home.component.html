@@ -1,0 +1,11 @@
+<div class="wrapper">
+    <h1>Demos:</h1>
+
+    <nav>
+        <ul>
+            <li *ngFor="let demo of demos">
+                <a [routerLink]="demo.link">{{ demo.title }}</a>
+            </li>
+        </ul>
+    </nav>
+</div>
