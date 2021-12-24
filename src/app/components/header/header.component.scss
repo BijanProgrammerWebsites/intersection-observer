@@ -64,6 +64,7 @@ header {
         position: fixed;
         bottom: var(--shell--padding);
         left: var(--shell--padding);
+        z-index: 1;
 
         border: none;
 

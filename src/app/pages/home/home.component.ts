@@ -9,5 +9,6 @@ export class HomeComponent {
     public demos: {title: string; link: string}[] = [
         {title: 'Random Trailer', link: 'random-trailer'},
         {title: 'Text Marker', link: 'text-marker'},
+        {title: 'Mysterious Stacking Sections', link: 'mysterious-stacking-sections'},
     ];
 }

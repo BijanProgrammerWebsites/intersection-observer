@@ -8,9 +8,10 @@ import {PipesModule} from '../pipes/pipes.module';
 import {RouterModule} from '@angular/router';
 import {RandomTrailerComponent} from './random-trailer/random-trailer.component';
 import {TextMarkerComponent} from './text-marker/text-marker.component';
+import {MysteriousStackingSectionsComponent} from './mysterious-stacking-sections/mysterious-stacking-sections.component';
 
 @NgModule({
-    declarations: [HomeComponent, RandomTrailerComponent, TextMarkerComponent],
+    declarations: [HomeComponent, RandomTrailerComponent, TextMarkerComponent, MysteriousStackingSectionsComponent],
     imports: [CommonModule, PipesModule, ComponentsModule, RouterModule],
 })
 export class PagesModule {}

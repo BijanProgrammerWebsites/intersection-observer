@@ -1,0 +1,116 @@
+.body {
+    position: relative;
+    overflow: auto;
+
+    height: 100vh;
+
+    section {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+        height: 100vh;
+
+        .fixed {
+            --gap: 2rem;
+
+            position: fixed;
+            top: 50%;
+            z-index: -1;
+
+            justify-content: center;
+
+            transform: translateY(-50%);
+
+            pointer-events: none;
+
+            h2 {
+                font-size: 4.8rem;
+            }
+
+            p {
+                font-size: 2.4rem;
+            }
+        }
+
+        &:nth-child(2n) {
+            background-color: hsl(0, 0%, 10%);
+            color: hsl(0, 0%, 98%);
+        }
+
+        &:nth-child(2n + 1) {
+            background-color: hsl(0, 0%, 98%);
+            color: hsl(0, 0%, 10%);
+        }
+
+        &.fade-in {
+            h2 {
+                animation: mysterious-stacking-sections--heading-fade-in var(--animation--duration--slow) ease-in-out
+                    forwards;
+            }
+
+            p {
+                animation: mysterious-stacking-sections--paragraph-fade-in var(--animation--duration--slow) ease-in-out
+                    forwards;
+            }
+        }
+
+        &.fade-out {
+            h2 {
+                animation: mysterious-stacking-sections--heading-fade-out var(--animation--duration--slow) ease-in-out
+                    forwards;
+            }
+
+            p {
+                animation: mysterious-stacking-sections--paragraph-fade-out var(--animation--duration--slow) ease-in-out
+                    forwards;
+            }
+        }
+    }
+}
+
+@keyframes mysterious-stacking-sections--heading-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes mysterious-stacking-sections--paragraph-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes mysterious-stacking-sections--heading-fade-out {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+}
+
+@keyframes mysterious-stacking-sections--paragraph-fade-out {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+}
