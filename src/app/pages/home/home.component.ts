@@ -10,5 +10,6 @@ export class HomeComponent {
         {title: 'Random Trailer', link: 'random-trailer'},
         {title: 'Text Marker', link: 'text-marker'},
         {title: 'Mysterious Stacking Sections', link: 'mysterious-stacking-sections'},
+        {title: 'Parallax Header', link: 'parallax-header'},
     ];
 }

@@ -9,9 +9,16 @@ import {RouterModule} from '@angular/router';
 import {RandomTrailerComponent} from './random-trailer/random-trailer.component';
 import {TextMarkerComponent} from './text-marker/text-marker.component';
 import {MysteriousStackingSectionsComponent} from './mysterious-stacking-sections/mysterious-stacking-sections.component';
+import {ParallaxHeaderComponent} from './parallax-header/parallax-header.component';
 
 @NgModule({
-    declarations: [HomeComponent, RandomTrailerComponent, TextMarkerComponent, MysteriousStackingSectionsComponent],
+    declarations: [
+        HomeComponent,
+        RandomTrailerComponent,
+        TextMarkerComponent,
+        MysteriousStackingSectionsComponent,
+        ParallaxHeaderComponent,
+    ],
     imports: [CommonModule, PipesModule, ComponentsModule, RouterModule],
 })
 export class PagesModule {}
