@@ -1,4 +1,5 @@
 import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
+import {IntersectionService} from '../../services/intersection.service';
 
 @Component({
     selector: 'app-random-trailer',
@@ -15,24 +16,17 @@ export class RandomTrailerComponent implements AfterViewInit {
     }
 
     private main(): void {
-        this.observer = new IntersectionObserver(
-            (entries: IntersectionObserverEntry[]) => {
-                entries.forEach((entry) => {
-                    const element: HTMLElement | null = (entry.target as HTMLElement).querySelector('h2');
-                    if (!element || !entry.isIntersecting) return;
+        this.observer = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
+            entries.forEach((entry) => {
+                const element: HTMLElement | null = (entry.target as HTMLElement).querySelector('h2');
+                if (!element || !entry.isIntersecting) return;
 
-                    const ratio = Math.min(1, entry.intersectionRatio + 0.1);
+                const ratio = Math.min(1, entry.intersectionRatio + 0.1);
 
-                    element.style.transform = `scale(${ratio})`;
-                    element.style.opacity = ratio.toString();
-                });
-            },
-            {
-                threshold: Array(100)
-                    .fill(0)
-                    .map((_, i) => (i + 1) / 100),
-            }
-        );
+                element.style.transform = `scale(${ratio})`;
+                element.style.opacity = ratio.toString();
+            });
+        }, IntersectionService.PERCENT_OPTIONS);
 
         const sections: HTMLElement[] = Array.from(this.body.nativeElement.querySelectorAll('section'));
         sections.forEach((section) => {
