@@ -1,6 +1,8 @@
 .body {
     header {
         background-image: url('~src/assets/images/nature/desert-01.jpg');
+        background-color: hsl(0, 0, 40%);
+        background-blend-mode: multiply;
         background-size: auto 200vh;
         background-position: center var(--position-y, 100vh);
         color: hsl(0, 0%, 98%);
@@ -18,6 +20,9 @@
             flex-direction: column;
             justify-content: center;
             gap: 2rem;
+
+            width: 100%;
+            height: 100%;
 
             transform: translate(-50%, var(--translate-y, -50%));
 
