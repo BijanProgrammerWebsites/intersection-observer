@@ -21,10 +21,10 @@ export class RandomTrailerComponent implements AfterViewInit {
                     const element: HTMLElement | null = (entry.target as HTMLElement).querySelector('h2');
                     if (!element || !entry.isIntersecting) return;
 
-                    const intersectionRatio = Math.min(1, entry.intersectionRatio + 0.1);
+                    const ratio = Math.min(1, entry.intersectionRatio + 0.1);
 
-                    element.style.transform = `scale(${0.5 + intersectionRatio / 2})`;
-                    element.style.opacity = intersectionRatio.toString();
+                    element.style.transform = `scale(${ratio})`;
+                    element.style.opacity = ratio.toString();
                 });
             },
             {
