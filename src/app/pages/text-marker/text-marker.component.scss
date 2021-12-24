@@ -1,0 +1,25 @@
+.body {
+    padding-block: var(--shell--padding);
+
+    p {
+        font-size: 2rem;
+        line-height: 1.5;
+
+        mark {
+            background-color: transparent;
+            background-image: linear-gradient(yellow, yellow);
+            background-size: 0;
+            background-repeat: no-repeat;
+
+            &.fade-in {
+                animation: text-marker--fade-in var(--animation--duration--slow) forwards;
+            }
+        }
+    }
+}
+
+@keyframes text-marker--fade-in {
+    to {
+        background-size: 100%;
+    }
+}

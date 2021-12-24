@@ -42,7 +42,7 @@ header {
             width: 100%;
             height: 100%;
 
-            padding: 1.2rem;
+            padding: 0.8em;
 
             border-radius: 999rem;
 
@@ -62,7 +62,7 @@ header {
 
     &.minimal {
         position: fixed;
-        top: var(--shell--padding);
+        bottom: var(--shell--padding);
         left: var(--shell--padding);
 
         border: none;
@@ -71,6 +71,8 @@ header {
 
         .icon-wrapper {
             color: var(--color--default-background);
+
+            font-size: 2.4rem;
 
             &::before {
                 background-color: var(--color--default-foreground);
