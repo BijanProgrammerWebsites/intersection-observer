@@ -1,0 +1,65 @@
+.body {
+    background-color: hsl(0, 0%, 10%);
+
+    overflow-x: hidden;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem;
+
+    .tile {
+        background-color: hsl(var(--hue), 100%, 50%);
+        opacity: 0;
+
+        width: 100%;
+        aspect-ratio: 1 / 1;
+
+        &.fade-in {
+            transform-origin: top left;
+
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+            animation-fill-mode: both;
+        }
+
+        @for $i from 1 to 3 + 1 {
+            &:nth-child(3n + #{$i}) {
+                &.fade-in {
+                    animation-name: rainbow-tiles--fade-in--#{$i};
+                }
+            }
+        }
+    }
+}
+
+@keyframes rainbow-tiles--fade-in--1 {
+    from {
+        transform: translate(-10rem, 10rem) rotate(45deg);
+        transform-origin: top left;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rainbow-tiles--fade-in--2 {
+    from {
+        transform: translateY(20rem);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rainbow-tiles--fade-in--3 {
+    from {
+        transform: translate(10rem, 10rem) rotate(-45deg);
+        transform-origin: top right;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

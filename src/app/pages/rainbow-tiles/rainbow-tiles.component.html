@@ -1,0 +1,3 @@
+<div #body class="body">
+    <div class="tile" *ngFor="let _ of Array(360).fill(null); index as index" [style.--hue]="index"></div>
+</div>

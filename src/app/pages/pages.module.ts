@@ -10,6 +10,7 @@ import {RandomTrailerComponent} from './random-trailer/random-trailer.component'
 import {TextMarkerComponent} from './text-marker/text-marker.component';
 import {MysteriousStackingSectionsComponent} from './mysterious-stacking-sections/mysterious-stacking-sections.component';
 import {ParallaxHeaderComponent} from './parallax-header/parallax-header.component';
+import {RainbowTilesComponent} from './rainbow-tiles/rainbow-tiles.component';
 
 @NgModule({
     declarations: [
@@ -18,6 +19,7 @@ import {ParallaxHeaderComponent} from './parallax-header/parallax-header.compone
         TextMarkerComponent,
         MysteriousStackingSectionsComponent,
         ParallaxHeaderComponent,
+        RainbowTilesComponent,
     ],
     imports: [CommonModule, PipesModule, ComponentsModule, RouterModule],
 })
