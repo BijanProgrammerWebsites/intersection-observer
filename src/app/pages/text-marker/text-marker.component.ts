@@ -28,7 +28,7 @@ export class TextMarkerComponent implements AfterViewInit {
             },
             {
                 rootMargin: '0px 0px -100px',
-                threshold: 1,
+                threshold: 0,
             }
         );
 

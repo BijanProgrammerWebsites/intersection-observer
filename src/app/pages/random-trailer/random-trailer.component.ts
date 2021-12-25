@@ -26,7 +26,7 @@ export class RandomTrailerComponent implements AfterViewInit {
                 element.style.transform = `scale(${ratio})`;
                 element.style.opacity = ratio.toString();
             });
-        }, IntersectionService.PERCENT_OPTIONS);
+        }, IntersectionService.thresholdOptions(100));
 
         const sections: HTMLElement[] = Array.from(this.body.nativeElement.querySelectorAll('section'));
         sections.forEach((section) => {

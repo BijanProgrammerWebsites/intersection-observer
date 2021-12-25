@@ -29,7 +29,7 @@ export class ParallaxHeaderComponent implements AfterViewInit {
                 headerElement.style.setProperty('--position-y', `${vh}vh`);
                 fixedElement.style.setProperty('--translate-y', `calc(-50% + ${0.8 * vh}vh)`);
             });
-        }, IntersectionService.PERCENT_OPTIONS);
+        }, IntersectionService.thresholdOptions(10));
 
         const fixed: HTMLElement = this.body.nativeElement.querySelector('header');
         this.observer.observe(fixed);
