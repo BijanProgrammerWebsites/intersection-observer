@@ -7,6 +7,7 @@ import {TextMarkerComponent} from './pages/text-marker/text-marker.component';
 import {MysteriousStackingSectionsComponent} from './pages/mysterious-stacking-sections/mysterious-stacking-sections.component';
 import {ParallaxHeaderComponent} from './pages/parallax-header/parallax-header.component';
 import {RainbowTilesComponent} from './pages/rainbow-tiles/rainbow-tiles.component';
+import {ChameleonGalleryComponent} from './pages/chameleon-gallery/chameleon-gallery.component';
 
 const routes: Routes = [
     {path: '', pathMatch: 'full', component: HomeComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
     {path: 'mysterious-stacking-sections', component: MysteriousStackingSectionsComponent},
     {path: 'parallax-header', component: ParallaxHeaderComponent},
     {path: 'rainbow-tiles', component: RainbowTilesComponent},
+    {path: 'chameleon-gallery', component: ChameleonGalleryComponent},
     {path: '*', redirectTo: ''},
 ];
 

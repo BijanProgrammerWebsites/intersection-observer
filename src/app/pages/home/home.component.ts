@@ -12,5 +12,6 @@ export class HomeComponent {
         {title: 'Mysterious Stacking Sections', link: 'mysterious-stacking-sections'},
         {title: 'Parallax Header', link: 'parallax-header'},
         {title: 'Rainbow Tiles', link: 'rainbow-tiles'},
+        {title: 'Chameleon Gallery', link: 'chameleon-gallery'},
     ];
 }

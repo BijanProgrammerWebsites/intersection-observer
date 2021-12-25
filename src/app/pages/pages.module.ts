@@ -11,6 +11,7 @@ import {TextMarkerComponent} from './text-marker/text-marker.component';
 import {MysteriousStackingSectionsComponent} from './mysterious-stacking-sections/mysterious-stacking-sections.component';
 import {ParallaxHeaderComponent} from './parallax-header/parallax-header.component';
 import {RainbowTilesComponent} from './rainbow-tiles/rainbow-tiles.component';
+import {ChameleonGalleryComponent} from './chameleon-gallery/chameleon-gallery.component';
 
 @NgModule({
     declarations: [
@@ -20,6 +21,7 @@ import {RainbowTilesComponent} from './rainbow-tiles/rainbow-tiles.component';
         MysteriousStackingSectionsComponent,
         ParallaxHeaderComponent,
         RainbowTilesComponent,
+        ChameleonGalleryComponent,
     ],
     imports: [CommonModule, PipesModule, ComponentsModule, RouterModule],
 })

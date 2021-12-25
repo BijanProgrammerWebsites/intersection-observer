@@ -1,0 +1,63 @@
+.body {
+    --gap: 10vw;
+
+    overflow-y: hidden;
+
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+
+    height: 100vh;
+
+    img {
+        flex: 1;
+
+        opacity: 0;
+
+        max-width: 70vw;
+        max-height: 70%;
+        object-fit: contain;
+
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+
+        &:first-child {
+            margin-inline-start: calc(3 * var(--gap));
+        }
+
+        &:last-child {
+            margin-inline-end: calc(3 * var(--gap));
+        }
+
+        &.fade-in {
+            animation-name: chameleon-gallery--fade-in;
+        }
+
+        &.fade-out {
+            animation-name: chameleon-gallery--fade-out;
+        }
+    }
+}
+
+@keyframes chameleon-gallery--fade-in {
+    from {
+        //transform: translateX(20rem);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes chameleon-gallery--fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+
+        //transform: translateX(-20rem);
+    }
+}
